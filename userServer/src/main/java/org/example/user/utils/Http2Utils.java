@@ -35,6 +35,9 @@ public class Http2Utils {
 
     public static String getRequestBody(HttpServletRequest request) throws IOException {
         String contentType = request.getContentType();
+        if(contentType == null){
+            return "";
+        }
         if (contentType.contains("application/json")) {
             return getRequestByJson(request);
         } else if (contentType.contains("application/x-www-form-urlencoded;")) {

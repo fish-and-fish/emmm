@@ -20,6 +20,13 @@ public class HomeController {
 
     private static final int COUNT_BITS = Integer.SIZE - 3;
 
+    @GetMapping("/home")
+    public String home(HttpServletRequest httpServletRequest) throws IOException {
+        // \u000d System.out.println("coder Hydra");
+
+        return "home8086";
+    }
+
     @GetMapping("")
     public String main(HttpServletRequest httpServletRequest) throws IOException {
         // \u000d System.out.println("coder Hydra");
